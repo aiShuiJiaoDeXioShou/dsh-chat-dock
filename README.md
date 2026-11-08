@@ -1,5 +1,7 @@
 # dsh-chat-dock · Chat 浮窗
 
+[![CI](https://github.com/aiShuiJiaoDeXioShou/dsh-chat-dock/actions/workflows/ci.yml/badge.svg)](https://github.com/aiShuiJiaoDeXioShou/dsh-chat-dock/actions/workflows/ci.yml)
+
 在 DeepSeek Harness 里打开 DeepSeek Chat（后续 ChatGPT / Claude），把它放进可浮动的右侧栏 Browser 标签，并用一个全局悬浮控制台镜像最新回复、复制或插入当前会话输入框。
 
 MIT · TypeScript · DSH Desktop ≥ 0.2.2-rc.1
