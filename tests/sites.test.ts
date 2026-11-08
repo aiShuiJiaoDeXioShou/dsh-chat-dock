@@ -115,6 +115,14 @@ test('resolveSites appends validated custom sites exactly once', () => {
   assert.equal(sites[1]?.extraction.latestReply.includes('innerText'), true)
 })
 
+test('resolveSites skips custom sites the user disabled', () => {
+  const sites = resolveSites({
+    ...defaultSettings(),
+    customSites: [{ id: 'off', label: 'Off', url: 'https://off.example.com/', enabled: false }],
+  })
+  assert.deepEqual(sites.map((site) => site.id), ['deepseek'])
+})
+
 test('matchSite, pickSite and localized use the expected site', () => {
   const sites = resolveSites({ ...defaultSettings(), overrides: { chatgpt: { enabled: true } } })
   assert.equal(matchSite(sites, 'https://chatgpt.com/c/1')?.id, 'chatgpt')

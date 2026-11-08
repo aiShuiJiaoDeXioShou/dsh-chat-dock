@@ -246,6 +246,7 @@ export function resolveSites(settings: ChatDockSettings): WebChatSite[] {
   }
   const baseIds = new Set(DEFAULT_SITES.map((site) => site.id))
   for (const input of settings.customSites) {
+    if (input.enabled === false) continue
     if (baseIds.has(input.id.trim())) continue
     const site = customSite(input)
     if (site === undefined || seen.has(site.id)) continue

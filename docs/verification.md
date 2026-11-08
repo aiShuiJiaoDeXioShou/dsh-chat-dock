@@ -19,7 +19,7 @@ npm run check
 
 - client 和 tests 两份 tsconfig 的 `--noEmit` 通过。
 - esbuild 生成 `client/client.js`；bundle 不含 `require("@deepseek-ai/...")`。
-- `tsx --test` 共 39 个测试全部通过，覆盖：站点匹配与启用、抓取规范化、几何 clamp、设置迁移与持久化、自定义站点解析、webview 选择与抓取超时、浮动调用、插入文本格式，以及控制台/设置页/入口按钮的 React 静态渲染。
+- `tsx --test` 共 40 个测试全部通过，覆盖：站点匹配与启用、抓取规范化、几何 clamp、设置迁移与持久化、自定义站点解析、webview 选择与抓取超时、浮动调用、插入文本格式，以及控制台/设置页/入口按钮的 React 静态渲染。
 
 React 静态渲染测试使用 `react-dom/server`，只证明组件树在默认、收起、隐藏和设置状态下可以渲染，不证明浏览器里的布局、动画或事件。
 
@@ -29,7 +29,7 @@ React 静态渲染测试使用 `react-dom/server`，只证明组件树在默认�
 plugin_manager action=install_bundle target=/absolute/path/to/dsh-chat-dock
 ```
 
-返回 `application: applied`，bundle `dsh-chat-dock`，版本 `0.1.0`。profile 的 `package.json` 增加了链接依赖，bundle 已启用。
+返回 `application: applied`，bundle `dsh-chat-dock`，安装记录版本 `0.1.0`。随后发布的 `0.1.1` 修复了自定义站点 `enabled: false` 被忽略的问题；本地 profile 使用链接安装，重新构建后的 `client/client.js` 已是 `0.1.1`，插件管理器里的安装记录要重新安装才会更新。profile 的 `package.json` 增加了链接依赖，bundle 已启用。
 
 ### 槽位注册
 

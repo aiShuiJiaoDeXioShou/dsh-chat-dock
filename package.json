@@ -1,6 +1,6 @@
 {
   "name": "dsh-chat-dock",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Floating web-chat dock for DeepSeek Harness: open DeepSeek Chat (later ChatGPT and Claude) in a right-Sidebar Browser tab, float it, and mirror captured replies into the composer.",
   "type": "module",
   "license": "MIT",

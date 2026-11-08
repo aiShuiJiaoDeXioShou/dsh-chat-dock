@@ -66,7 +66,7 @@ export const zh: Record<string, string> = {
   'settings.saved': '已保存。',
   'settings.invalid': '自定义站点无效：{error}',
   'settings.loginNote': '网页登录态不跨应用重启；重启后需要在 Browser 标签里重新登录。',
-  'settings.about': 'dsh-chat-dock v0.1.0 · MIT',
+  'settings.about': 'dsh-chat-dock v0.1.1 · MIT',
   'settings.needSite': '至少启用一个站点。',
 }
 
@@ -134,7 +134,7 @@ export const en: Record<string, string> = {
   'settings.saved': 'Saved.',
   'settings.invalid': 'Invalid custom sites: {error}',
   'settings.loginNote': 'Web login state does not survive an app restart; sign in again in the Browser tab after restarting.',
-  'settings.about': 'dsh-chat-dock v0.1.0 · MIT',
+  'settings.about': 'dsh-chat-dock v0.1.1 · MIT',
   'settings.needSite': 'Enable at least one site.',
 }
 
