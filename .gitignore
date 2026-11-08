@@ -1,0 +1,5 @@
+node_modules/
+client/.bundle.cjs
+.DS_Store
+npm-debug.log*
+*.tgz

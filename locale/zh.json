@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Chat 浮窗",
+    "description": "在右侧栏打开 DeepSeek Chat 并浮动为独立浮窗，镜像最新回复，一键复制或插入输入框；站点适配器预留 ChatGPT / Claude。"
+  }
+}

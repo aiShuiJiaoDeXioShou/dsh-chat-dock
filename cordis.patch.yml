@@ -1,0 +1,4 @@
+# dsh-chat-dock bundle patch: one client-only plugin row.
+- insert:
+    - id: chat-dock
+      name: 'dsh-chat-dock'

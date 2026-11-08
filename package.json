@@ -1,0 +1,78 @@
+{
+  "name": "dsh-chat-dock",
+  "version": "0.1.0",
+  "description": "Floating web-chat dock for DeepSeek Harness: open DeepSeek Chat (later ChatGPT and Claude) in a right-Sidebar Browser tab, float it, and mirror captured replies into the composer.",
+  "type": "module",
+  "license": "MIT",
+  "author": "aiShuiJiaoDeXioShou",
+  "homepage": "https://github.com/aiShuiJiaoDeXioShou/dsh-chat-dock#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aiShuiJiaoDeXioShou/dsh-chat-dock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aiShuiJiaoDeXioShou/dsh-chat-dock/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "chat",
+    "deepseek-chat",
+    "chatgpt",
+    "claude",
+    "floating-window",
+    "sidebar",
+    "web-chat"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.1",
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.client.json --noEmit && tsc -p tsconfig.tests.json --noEmit",
+    "build": "node build.mjs",
+    "test": "tsx --test tests/*.test.ts tests/*.test.tsx",
+    "check": "npm run typecheck && npm run build && npm test",
+    "release:pack": "npm pack"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.28.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

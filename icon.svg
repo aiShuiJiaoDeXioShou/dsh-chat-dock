@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Chat dock">
+  <defs>
+    <linearGradient id="dock-bg" x1="24" y1="16" x2="232" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b5bff"/>
+      <stop offset="1" stop-color="#7a3cff"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#dock-bg)"/>
+  <path d="M64 72h128a20 20 0 0 1 20 20v64a20 20 0 0 1-20 20h-54l-36 28v-28H64a20 20 0 0 1-20-20V92a20 20 0 0 1 20-20Z" fill="#fff" opacity=".96"/>
+  <circle cx="92" cy="124" r="9" fill="#3b5bff"/>
+  <circle cx="128" cy="124" r="9" fill="#3b5bff"/>
+  <circle cx="164" cy="124" r="9" fill="#3b5bff"/>
+  <path d="M176 176h34a16 16 0 0 0 16-16v-34" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".75"/>
+  <path d="M226 176v34h-34" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+</svg>

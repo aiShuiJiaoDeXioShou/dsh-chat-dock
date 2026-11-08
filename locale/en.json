@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Chat dock",
+    "description": "Open DeepSeek Chat in a right-Sidebar Browser tab, float it, mirror the latest reply, and copy or insert it into the composer; site adapters leave room for ChatGPT and Claude."
+  }
+}
